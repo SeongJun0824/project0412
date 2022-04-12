@@ -1,0 +1,102 @@
+/*header*/
+.header{
+  box-shadow: 0 1px 2px #ccc;
+}
+.header .inner-header{
+	display: flex;
+	justify-content: center;
+	padding: 10px 0;
+	box-sizing: border-box;
+}
+.header .inner-header .nav{
+	flex: 0 1 1000px;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+	/* border: 1px solid; */
+	box-sizing: border-box;
+}
+.header .inner-header .nav h1.logo{
+	flex: 0 1 120px;
+	height: auto;
+}
+.header .inner-header .nav h1.logo img{
+	width: 100%;
+	height: auto;
+	display: block;
+}
+.header .inner-header .nav .gnb{
+	flex: 0 1 500px;
+	height: auto;
+}
+.header .inner-header .nav .gnb>ul{
+	display: flex;
+	justify-content: space-evenly;
+}
+.header .inner-header .nav .gnb>ul>li{
+	flex: 1;
+	text-align: center;
+	line-height: 60px;
+	color: rgb(0, 0, 0);
+	font-size: 14px;
+}
+.header .inner-header .nav .gnb>ul>li a{
+	position: relative;
+	font-weight: 400;
+	color: inherit;
+}
+.header .inner-header .nav .gnb>ul>li>a:hover{
+	letter-spacing: 1px;
+	font-weight: bold;
+	transition: all 0.3s ease-in-out;
+	color: #0066CC;
+}
+.header .inner-header .nav .gnb>ul>li>a::after{
+	content: '';
+	display: block;
+	width: 0;
+	height: 3px;
+	left: 50%;
+	position: absolute;
+	bottom: -20px;
+	background-color: #000;
+	transition: all 0.3s ease-in-out;
+}
+.header .inner-header .nav .gnb>ul>li>a:hover::after{
+	width: 100%;
+	left: 0;
+	bottom: -5px;
+	background-color: #0066CC;
+}
+.header .inner-header .nav span.menu{
+	flex: 0 1 60px;
+	text-align: center;
+	line-height: 60px;
+	background-color: #000;
+	color: #fff;
+	font-size: 20px;
+	border-radius: 10px;
+	display: none;
+	transition: all 0.3s;
+	cursor: pointer;
+}
+.header .inner-header .nav span.menu:hover{
+	transform: scale(1.02);
+	background-color: #555;
+	box-shadow: 0 1px 2px #ccc;
+}
+
+@media only screen and (max-width:767px){
+	.header .inner-header .nav h1.logo{
+		display: none;
+	}
+	.header .inner-header .nav .gnb{
+		display: none;
+	}
+	.header .inner-header .nav span.menu{
+		display: block;
+	}
+	.header .inner-header .nav{
+		padding: 0 10px;
+	}
+}
